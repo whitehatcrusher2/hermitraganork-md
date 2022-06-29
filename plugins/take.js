@@ -97,11 +97,11 @@ Module({
             return await m.sendReply("*Failed*")
         }
         await m.client.sendMessage(
-            message.jid,
+            m.jid,
             {
             video: {
             url: result
             }
-        }, {quoted:message.quoted});
+        }, {quoted:m.quoted});
     } else return await m.sendReply('_Reply to an animated sticker!_');
 }));
